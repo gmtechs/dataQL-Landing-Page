@@ -3,66 +3,74 @@ import { Cpu, Activity, Shield } from "lucide-react";
 const pillars = [
   {
     icon: Cpu,
-    tag: "01 / CORE",
+    tag: "01 / Core",
     title: "Agentic Core Architecture",
     body: "Dynamic Model Context Protocol (MCP) tool summoning. Agents negotiate, route, and instantiate the precise toolchain per query — no static pipelines, no wasted compute.",
     metric: "MCP · 142 TOOLS",
   },
   {
     icon: Activity,
-    tag: "02 / COMPUTE",
+    tag: "02 / Compute",
     title: "Probabilistic Simulations",
     body: "Localized Quasi-Monte Carlo execution running 100,000+ matrix distribution loops. Convergence-bounded uncertainty surfaced as actionable confidence bands.",
     metric: "QMC · 10⁵ LOOPS",
   },
   {
     icon: Shield,
-    tag: "03 / TRUST",
+    tag: "03 / Trust",
     title: "Immutable Lineage Tracking",
     body: "Every transformation cryptographically signed. Visual data traceability with per-node reliability scores — audit any number back to its origin row.",
     metric: "SHA · LINEAGE",
   },
 ];
 
-export function Pillars() {
+export function Research() {
   return (
-    <section id="protocol" className="relative py-28 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div>
-            <span className="font-mono text-xs text-primary tracking-widest">
-              // THE CORE ENGINE
-            </span>
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-              Three protocols. One coherent intelligence layer.
-            </h2>
+    <section id="research" className="relative py-32 border-t border-border/60">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-14">
+        <div className="grid lg:grid-cols-12 gap-12 mb-16">
+          <div className="lg:col-span-3">
+            <p className="eyebrow mb-3">§ 03 — Research</p>
+            <p className="font-mono text-[11px] text-muted-foreground/80">
+              Three protocols<br />
+              One coherence layer
+            </p>
           </div>
-          <p className="text-muted-foreground max-w-sm">
-            Built for institutional researchers who require provenance, statistical
-            rigor, and deterministic reproducibility.
-          </p>
+          <div className="lg:col-span-9">
+            <h2 className="text-4xl lg:text-6xl tracking-[-0.02em] leading-[1.05] font-medium max-w-3xl">
+              The three protocols that compose every{" "}
+              <span className="font-serif italic font-normal text-primary">DataQL</span>{" "}
+              instrument.
+            </h2>
+            <p className="mt-6 text-foreground/70 max-w-2xl leading-relaxed">
+              Each protocol is published as open research and implemented as a
+              hardened runtime kernel. Together, they form the substrate on which
+              our flagship product — Syftics — is built.
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
           {pillars.map((p) => (
             <article
               key={p.tag}
-              className="group relative p-7 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-all duration-500 hover:-translate-y-1"
+              className="group relative p-8 lg:p-10 bg-background hover:bg-card transition-all duration-500"
             >
-              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/60 transition-opacity" />
-              <div className="flex items-center justify-between">
-                <div className="h-11 w-11 grid place-items-center rounded-lg border border-border bg-background/50 text-primary group-hover:border-primary/40 transition-colors">
+              <div className="flex items-center justify-between mb-12">
+                <div className="h-12 w-12 grid place-items-center rounded-lg border border-border bg-background/50 text-primary group-hover:border-primary/40 transition-colors">
                   <p.icon size={20} strokeWidth={1.5} />
                 </div>
                 <span className="font-mono text-[10px] text-muted-foreground tracking-widest">
                   {p.tag}
                 </span>
               </div>
-              <h3 className="mt-7 text-xl font-semibold tracking-tight">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <h3 className="text-2xl font-medium tracking-tight font-serif">
+                {p.title}
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-sm">
                 {p.body}
               </p>
-              <div className="mt-8 pt-5 border-t border-dashed border-border/70 flex items-center justify-between">
+              <div className="mt-12 pt-5 border-t border-dashed border-border/70 flex items-center justify-between">
                 <span className="font-mono text-[10px] text-muted-foreground/80">
                   {p.metric}
                 </span>
