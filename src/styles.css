@@ -114,6 +114,24 @@
   font-family: var(--font-mono);
 }
 
+@utility font-serif {
+  font-family: var(--font-serif);
+  font-feature-settings: "liga", "kern";
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility hairline {
+  background-image: linear-gradient(to right, transparent, var(--color-border) 20%, var(--color-border) 80%, transparent);
+  height: 1px;
+}
+
 @utility grid-bg {
   background-image:
     linear-gradient(to right, oklch(0.24 0.013 260 / 0.4) 1px, transparent 1px),
